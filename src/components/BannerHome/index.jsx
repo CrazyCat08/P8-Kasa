@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const BannerContainer = styled.div`
   background-image: url(${(props) => props.backgroundImage});
@@ -14,7 +14,7 @@ const BannerContainer = styled.div`
   margin-right: 7%;
   margin-bottom: 43px;
   border-radius: 25px;
-`
+`;
 
 const BannerTitle = styled.h2`
   font-size: 48px;
@@ -22,14 +22,14 @@ const BannerTitle = styled.h2`
   color: #ffffff;
   text-align: center;
   padding-left: 50px;
-`
+`;
 
 function BannerHome({ backgroundImage, title }) {
   return (
     <BannerContainer backgroundImage={backgroundImage}>
       <BannerTitle>{title}</BannerTitle>
     </BannerContainer>
-  )
+  );
 }
 
-export default BannerHome
+export default BannerHome;

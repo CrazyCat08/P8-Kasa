@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import accommodations from '../../data/accommodations.json'
+import accommodations from "../../data/accommodations.json";
 
 const GalleryContainer = styled.div`
   width: 86%;
@@ -18,7 +18,7 @@ const GalleryContainer = styled.div`
   grid-gap: 50px;
   box-sizing: border-box;
   overflow: auto;
-`
+`;
 
 // Thumb défini en div pour le moment. Sera un Link plus tard
 const Thumb = styled.div`
@@ -35,7 +35,7 @@ justify-content: flex-start;
 align-items; flex_end;
 box-sizing: border-box;
 position: relative;
-`
+`;
 
 const ThumbTitle = styled.h3`
   color: white;
@@ -46,7 +46,7 @@ const ThumbTitle = styled.h3`
   position: absolute;
   left: 20px;
   bottom: 20px;
-`
+`;
 
 function Gallery() {
   return (
@@ -57,7 +57,7 @@ function Gallery() {
         </Thumb>
       ))}
     </GalleryContainer>
-  )
+  );
 }
 
-export default Gallery
+export default Gallery;

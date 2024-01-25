@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "img": "./assets/mer.png",
+    "alt": "Mer et rochers",
+    "title": "Chez vous, partout et ailleurs"
+  },
+  {
+    "id": "2",
+    "img": "./assets/montagne.png",
+    "alt": "Montagnes",
+    "title": ""
+  }
+]

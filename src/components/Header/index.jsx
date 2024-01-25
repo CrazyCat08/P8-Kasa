@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom'
-import logo from '../../assets/logo.png'
-import styled from 'styled-components'
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import styled from "styled-components";
 
 const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 68px;
-  padding-top: 45px;
+  // padding-top: 45px;
+  margin-top: 45px;
   margin-bottom: 50px;
   margin-left: 7%;
   margin-right: 7%;
@@ -19,7 +20,7 @@ const HeaderContainer = styled.header`
     margin-left: 5%;
     margin-right: 5%;
   }
-`
+`;
 
 const StyledLogo = styled.img`
   height: 68px;
@@ -27,7 +28,7 @@ const StyledLogo = styled.img`
   @media (max-width: 767px) {
     height: 47px;
   }
-`
+`;
 
 const StyledNav = styled.nav`
   display: flex;
@@ -36,7 +37,7 @@ const StyledNav = styled.nav`
   @media (max-width: 767px) {
     gap: 26px;
   }
-`
+`;
 
 const StyledLink = styled(Link)`
   color: #ff6060;
@@ -54,7 +55,7 @@ const StyledLink = styled(Link)`
   @media (max-width: 767px) {
     font-size: 12px;
   }
-`
+`;
 
 function Header() {
   return (
@@ -66,6 +67,6 @@ function Header() {
       </StyledNav>
     </HeaderContainer>
   );
-};
+}
 
-export default Header
+export default Header;

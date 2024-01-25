@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import logo from '../../assets/logo-footer.png'
+import styled from "styled-components";
+import logo from "../../assets/logo-footer.png";
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -11,17 +11,17 @@ const FooterContainer = styled.footer`
   height: 209px;
   padding-top: 66px;
   padding-bottom: 29px;
-`
+`;
 
 const FooterLogo = styled.img`
   width: 122px;
   margin-bottom: 29px;
-`
+`;
 
 const FooterText = styled.p`
   color: white;
   font-weight: 500px;
-`
+`;
 
 function Footer() {
   return (
@@ -30,7 +30,7 @@ function Footer() {
       <FooterText>@ 2020 Kasa. All rights</FooterText>
       reserved
     </FooterContainer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
