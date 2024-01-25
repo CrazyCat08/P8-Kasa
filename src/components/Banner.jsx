@@ -7,5 +7,4 @@ function Banner({ image, title }) {
   );
 }
 
-
 export default Banner;

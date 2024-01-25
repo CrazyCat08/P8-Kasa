@@ -27,8 +27,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterLogo src={logo} alt="Logo footer" />
-      <FooterText>@ 2020 Kasa. All rights</FooterText>
-      reserved
+      <FooterText>@ 2020 Kasa. All rights reserved</FooterText>
     </FooterContainer>
   );
 }
