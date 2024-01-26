@@ -1,0 +1,217 @@
+.accommmodationHost {
+  display: flex;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .accommmodationTag {
+    display: flex;
+    flex-direction: column;
+    .accommmodationTitle {
+      h1 {
+        font-size: 36px;
+        margin-bottom: 0;
+        margin-top: 0;
+        @media (max-width: 767px) {
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+
+      .accommmodation {
+        margin-top: 0;
+        font-size: 18px;
+        margin-bottom: 20px;
+
+        @media (max-width: 767px) {
+          margin-bottom: 10px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      .tag {
+        display: flex;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        color: white;
+        padding: 8px 30px;
+        background-color: $main-red;
+        @media (max-width: 767px) {
+          margin-top: 15px;
+          font-size: 10px;
+          padding: 2px 15px;
+        }
+      }
+    }
+  }
+  .hostRating {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @media (max-width: 767px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+    .host {
+      display: flex;
+      width: 100%;
+      text-align: right;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      @media (max-width: 767px) {
+        min-width: 20%;
+        max-width: 25%;
+        font-size: 12px;
+      }
+      .hostName {
+        width: 50%;
+      }
+      .hostImg {
+        border-radius: 90px;
+        width: 64px;
+        height: 64px;
+        @media (max-width: 767px) {
+          width: 32px;
+          height: 32px;
+          margin-left: 10px;
+        }
+      }
+      .ratings {
+        bottom: 0;
+        .rating {
+          display: flex;
+          font-size: 14px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 25px;
+          color: white;
+          background-color: $main-red;
+          .img {
+            width: 24px;
+            height: 24px;
+            @media (max-width: 767px) {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.accordion-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .accordion-container {
+    width: 50%;
+    gap: 10px;
+    @media (max-width: 767px) {
+      gap: 20px;
+      width: 100%;
+    }
+    .accordionHeader {
+      background-color: $main-red;
+      border-radius: 5px;
+      width: 90%;
+      height: 52px;
+      @media (max-width: 767px) {
+        height: 30px;
+      }
+
+      .accordion-title {
+        margin-left: 20px;
+        font-weight: 500;
+        color: white;
+        font-size: 24px;
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
+      }
+      .accordion-arrow {
+        width: 32px;
+        height: 32px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 767px) {
+          width: 16px;
+          width: 16px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          transform: rotate(0deg);
+          transition: transform 0.5s ease;
+        }
+        &.rotate img {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .content {
+      width: 90%;
+      background-color: $grey-backgd;
+      border-radius: 5px;
+      margin: -45px 0 10px 50px;
+      z-index: 1;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+        margin: -55px 0 10px 20px;
+      }
+
+      &.open {
+        max-height: 200px;
+        transition: max-height 0.5s ease;
+      }
+
+      .content-text {
+        color: $main-red;
+        font-size: 18px;
+        transition: transform 0.5s ease;
+        transform: translateY(-100%);
+        @media (max-width: 767px) {
+          font-size: 12px;
+          margin: 20px 15px 15px 15px;
+        }
+      }
+
+      &.open .content-text {
+        transform: translateY(0);
+        transition: transform 0.5s ease;
+      }
+      .description-text {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

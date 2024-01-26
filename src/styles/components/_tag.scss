@@ -1,0 +1,26 @@
+.tags {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 25px;
+
+  @media (max-width: 767px) {
+    height: 18px;
+  }
+
+  &__item {
+    width: 115px;
+    height: 25px;
+    background-color: $main-red;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+
+    @media (max-width: 767px) {
+      width: 84px;
+      height: 18px;
+      font-size: 10px;
+    }
+  }
+}

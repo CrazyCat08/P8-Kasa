@@ -2,74 +2,56 @@
   width: 86%;
   margin-left: auto;
   margin-right: auto;
-  //   height: 829px;
   background-color: $grey-backgd;
   border-radius: 25px;
   padding: 56px 50px 43px 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  //   grid-gap: 50px;
   row-gap: 50px;
-  //   box-sizing: border-box;
-  //   overflow: auto;
+  column-gap: 5%;
+  margin-bottom: 50px;
+
+  @media (max-width: 767px) {
+    width: 90%;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
 }
 
 .card {
-  //   height: 340px;
-  // width: 340px;
-  width: 25vw;
-  height: 18vw;
   border-radius: 10px;
-  background-color: $main-red;
-  animation: fadeUp 2s;
+  transition: 0.3s;
+
   &:hover {
-    box-shadow:
-      rgba(0, 0, 0, 0.07) 0px 1px 2px,
-      rgba(0, 0, 0, 0.07) 0px 2px 4px,
-      rgba(0, 0, 0, 0.07) 0px 4px 8px,
-      rgba(0, 0, 0, 0.07) 0px 8px 16px,
-      rgba(0, 0, 0, 0.07) 0px 16px 32px,
-      rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    scale: 1.05;
   }
-  padding: 20px;
-  //   display: flex;
-  //   justify-content: flex-start;
-  //   align-items: flex_end;
-  //   box-sizing: border-box;
-  //   position: relative;
 
   &__content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    // width: 25vw;
-    // height: 18vw;
+    height: 100%;
     position: relative;
-    z-index: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.3) 100%
-    );
   }
-}
 
-.card__img {
-  align-self: center;
-  object-fit: cover;
-  width: 100%;
-  //   min-width: 30vw;
-  //   height: 18vw;
-  filter: brightness(0.7);
-}
+  &__img {
+    width: 100%;
+    margin: auto;
+    flex: 1;
+    object-fit: cover !important;
+    border-radius: 10px;
+    box-sizing: border-box;
+    filter: brightness(0.7);
+  }
 
-.card__title {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 0px;
-  text-align: left;
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
+  &__title {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    text-align: left;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+  }
 }

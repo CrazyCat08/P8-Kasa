@@ -4,13 +4,13 @@ import bannerImageHome from "../assets/mer.png";
 
 function Home() {
   return (
-    <div>
+    <section>
       <Banner
         image={bannerImageHome}
         title={"Chez vous, partout et ailleurs"}
       />
       <Gallery />
-    </div>
+    </section>
   );
 }
 
