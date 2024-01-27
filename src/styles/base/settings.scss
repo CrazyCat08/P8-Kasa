@@ -15,12 +15,13 @@ body {
   height: 100%;
   width: 100%;
   font-size: 24px;
+  font-weight: 500;
   line-height: 1.5;
   max-width: 1440px;
   color: $main-red;
 
   @media (max-width: 767px) {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.2;
   }
 }
