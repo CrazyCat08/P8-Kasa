@@ -1,0 +1,46 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 139px;
+  gap: 139px;
+
+  @include mobile-only {
+    margin-top: 110px;
+    gap: 113px;
+  }
+
+  &__title {
+    font-size: 288px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: -75px;
+
+    @include mobile-only {
+      font-size: 96px;
+      margin-bottom: -10px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    text-align: center;
+
+    @include mobile-only {
+      font-size: 18px;
+    }
+  }
+
+  &__link {
+    color: $main-red;
+    font-size: 18px;
+    text-decoration: underline;
+    text-align: center;
+
+    @include mobile-only {
+      font-size: 14px;
+    }
+  }
+}

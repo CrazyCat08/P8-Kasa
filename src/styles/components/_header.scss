@@ -9,7 +9,7 @@ header {
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: 767px) {
+  @include mobile-only {
     height: 47px;
     padding-top: 20px;
     margin-bottom: 27px;
@@ -20,7 +20,7 @@ header {
 .header__logo {
   height: 68px;
 
-  @media (max-width: 767px) {
+  @include mobile-only {
     height: 47px;
   }
 }
@@ -29,7 +29,7 @@ header {
   display: flex;
   gap: 57px;
 
-  @media (max-width: 767px) {
+  @include mobile-only {
     gap: 26px;
   }
 }
@@ -47,7 +47,7 @@ header {
     text-decoration: underline;
   }
 
-  @media (max-width: 767px) {
+  @include mobile-only {
     font-size: 12px;
   }
 }

@@ -9,7 +9,7 @@ footer {
   padding-top: 66px;
   padding-bottom: 29px;
 
-  @media (max-width: 767px) {
+  @include mobile-only {
     padding-bottom: 58px;
     padding-left: 121px;
     padding-right: 120px;
