@@ -5,10 +5,14 @@
   align-items: center;
   margin-top: 55px;
   margin-bottom: 139px;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
   gap: 139px;
 
   @include mobile-only {
     margin-top: 110px;
+    width: 90%;
     gap: 113px;
   }
 

@@ -1,73 +1,77 @@
-import { useParams } from "react-router-dom";
-import accommodations from "../data/accommodations.json";
-import Rating from "../components/Rating";
+import { useParams, Navigate } from "react-router-dom";
+import accommodations from "../data/accommodations-data.json";
 import Carousel from "../components/Carousel";
-import Accordion from "../components/Accordion";
 import Tag from "../components/Tag";
+import Rating from "../components/Rating";
+import Accordion from "../components/Accordion";
 
-const AccommodationSheet = () => {
+function AccommodationSheet() {
   const { id } = useParams();
-  const selectedData = accommodations.find((item) => item.id === id);
+  const selectedAccommodation = accommodations.find((item) => item.id === id);
 
-  // if (!selectedData) {
-  // }
+  if (!selectedAccommodation) {
+    <Navigate to="*" />;
+    // return <Error />;
+  }
 
-  const { title, location, host, tags, rating, description, equipments } =
-    selectedData;
+  const { title, description, host, rating, location, equipments, tags } =
+    selectedAccommodation;
   const hostName = host.name;
-  const hostPic = host.picture;
-  const data = [
+  const hostPicture = host.picture;
+
+  // Création d'un JSON pour le faire passer en props au composant Accordion
+  const accordionData = [
     {
       title: "Description",
       description,
     },
     {
       title: "Équipements",
-      description: equipments.map((equipment) => (
-        <p className="equipment-text" key={equipment}>
-          {equipment}
-          <br />
-        </p>
+      description: equipments.map((equipment, index) => (
+        <ul className="content-text equipment-list" key={index}>
+          <li>{equipment}</li>
+        </ul>
       )),
     },
   ];
 
   return (
-    <div>
-      {/* <Carousel pictures={selectedData.pictures} title={selectedData.title} /> */}
-      <div className="accommodationHost">
-        <div className="accommodationTag">
-          <div className="accommodationTitle">
+    <section className="accommodationContainer">
+      <Carousel photos={selectedAccommodation.pictures} />
+      <div className="accommodation-details-header">
+        <div className="title-location-tags">
+          <div className="title-location">
             <h1>{title}</h1>
-            <p className="accommodation">{location}</p>
+            <p className="location">{location}</p>
           </div>
           <div className="tags">
             {tags.map((tag, index) => (
-              <Tag key={index} tag={tag} />
+              <Tag className="tag" key={index} tag={tag} />
             ))}
           </div>
         </div>
-        <div className="hostRating">
+        <div className="host-rating">
           <div className="host">
-            <p className="hostName">{hostName}</p>
-            <img src={hostPic} alt="Hôte" className="hostImg" />
+            <p className="host__name">{hostName}</p>
+            <img src={hostPicture} alt="Hôte" className="host__picture" />
           </div>
-          <div className="ratings">
-            <Rating rating={rating} />
+          <div className="rating-stars">
+            <Rating starRating={rating} />
           </div>
         </div>
       </div>
-      <div className="accordion-main">
-        {data.map((item) => (
+
+      <div className="housing-accordions">
+        {accordionData.map((item) => (
           <Accordion
             key={item.id}
             title={item.title}
-            description={item.description}
+            content={item.description}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default AccommodationSheet;

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import upArrow from "../assets/arrow-up.svg";
-// import downArrow from "../assets/arrow-down.svg";
 
-function Accordion({ title, content, description }) {
+function Accordion({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -14,12 +13,16 @@ function Accordion({ title, content, description }) {
       <div className="accordion__header">
         <div className="accordion__title">{title}</div>
         <div className={`accordion__icon ${isOpen ? "rotate" : ""}`}>
-          <img src={upArrow} alt="Flèche vers le haut" onClick={handleToggle} />
+          <img
+            src={upArrow}
+            alt="Flèche pointant vers le haut"
+            onClick={handleToggle}
+          />
         </div>
       </div>
       <div className={`accordion__content ${isOpen ? "open" : ""}`}>
         <div className="content-text">{content}</div>
-        <div className="description-text">{description}</div>
+        {/* <div className="description-text">{description}</div> */}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import accommodations from "../data/accommodations.json";
+import accommodations from "../data/accommodations-data.json";
 
 function Gallery() {
   return (

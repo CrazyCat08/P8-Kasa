@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  border-radius: 5px;
 
   &__header {
     display: flex;
@@ -57,7 +58,9 @@
     font-size: 18px;
     font-weight: 400;
     background-color: $grey-backgd;
+    border-radius: 5px;
     overflow: hidden;
+    // overflow: auto;
     max-height: 0;
     transition: max-height 0.5s ease;
 
@@ -66,7 +69,7 @@
     }
 
     &.open {
-      max-height: 200px;
+      max-height: 500px;
     }
 
     .content-text {

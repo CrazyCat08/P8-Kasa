@@ -1,0 +1,23 @@
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 196px;
+  height: 25px;
+
+  @include mobile-only {
+    width: 98px;
+    height: 18px;
+    align-items: center;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+
+    @include mobile-only {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

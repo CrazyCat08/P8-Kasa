@@ -1,217 +1,147 @@
-.accommmodationHost {
+.equipment-list {
+  li {
+    margin-left: -20px;
+    line-height: 0;
+    margin-top: 27px;
+
+    @include mobile-only {
+      margin-top: 20px;
+    }
+  }
+}
+ 
+.accommodationContainer {
   display: flex;
-  margin-bottom: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mobile-only {
+    width: 90%;
+  }
+}
+
+.accommodation-details-header {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 50px;
+  width: 100%;
+  margin-bottom: 24px;
+
   @include mobile-only {
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom: 20px;
+    gap: 16px;
   }
-  .accommmodationTag {
+
+  .title-location-tags {
     display: flex;
     flex-direction: column;
-    .accommmodationTitle {
-      h1 {
-        font-size: 36px;
-        margin-bottom: 0;
-        margin-top: 0;
-        @include mobile-only {
-          font-size: 18px;
-          font-weight: 500;
-        }
-      }
-
-      .accommmodation {
-        margin-top: 0;
-        font-size: 18px;
-        margin-bottom: 20px;
-
-        @include mobile-only {
-          margin-bottom: 10px;
-          font-size: 14px;
-          font-weight: 500;
-        }
-      }
-    }
-
-    .tags {
-      display: flex;
-      gap: 10px;
-      .tag {
-        display: flex;
-        font-size: 14px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 25px;
-        color: white;
-        padding: 8px 30px;
-        background-color: $main-red;
-        @include mobile-only {
-          margin-top: 15px;
-          font-size: 10px;
-          padding: 2px 15px;
-        }
-      }
-    }
-  }
-  .hostRating {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
     gap: 10px;
+
+    @include mobile-only {
+      width: 100%;
+      gap: 10px;
+    }
+  }
+
+  .title-location {
+    justify-content: flex-start;
+    line-height: 142.6%;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      @include mobile-only {
+        font-size: 18px;
+      }
+    }
+
+    .location {
+      font-size: 18px;
+      margin-top: 5px;
+
+      @include mobile-only {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    height: 25px;
+
+    @include mobile-only {
+      height: 18px;
+    }
+  }
+
+  .host-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 21px;
+
     @include mobile-only {
       flex-direction: row-reverse;
-      justify-content: space-between;
       align-items: center;
-      margin-top: 15px;
     }
-    .host {
-      display: flex;
-      width: 100%;
+  }
+
+  .host {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+    @include mobile-only {
+    }
+
+    &__name {
+      font-size: 18px;
       text-align: right;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 10px;
+      width: 93px;
+      margin-right: 10px;
+      line-height: 142.6%;
+
       @include mobile-only {
-        min-width: 20%;
-        max-width: 25%;
+        width: 62px;
         font-size: 12px;
       }
-      .hostName {
-        width: 50%;
-      }
-      .hostImg {
-        border-radius: 90px;
-        width: 64px;
-        height: 64px;
-        @include mobile-only {
-          width: 32px;
-          height: 32px;
-          margin-left: 10px;
-        }
-      }
-      .ratings {
-        bottom: 0;
-        .rating {
-          display: flex;
-          font-size: 14px;
-          justify-content: center;
-          align-items: center;
-          border-radius: 25px;
-          color: white;
-          background-color: $main-red;
-          .img {
-            width: 24px;
-            height: 24px;
-            @include mobile-only {
-              width: 18px;
-              height: 18px;
-            }
-          }
-        }
+    }
+
+    &__picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      @include mobile-only {
+        width: 32px;
+        height: 32px;
       }
     }
   }
 }
-.accordion-main {
-  display: flex;
-  flex-direction: row;
+
+.housing-accordions {
   width: 100%;
-  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 6%;
+  align-items: flex-start;
   margin-bottom: 50px;
+
   @include mobile-only {
     flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .accordion-container {
-    width: 50%;
-    gap: 10px;
-    @include mobile-only {
-      gap: 20px;
-      width: 100%;
-    }
-    .accordionHeader {
-      background-color: $main-red;
-      border-radius: 5px;
-      width: 90%;
-      height: 52px;
-      @include mobile-only {
-        height: 30px;
-      }
-
-      .accordion-title {
-        margin-left: 20px;
-        font-weight: 500;
-        color: white;
-        font-size: 24px;
-        @include mobile-only {
-          font-size: 13px;
-        }
-      }
-      .accordion-arrow {
-        width: 32px;
-        height: 32px;
-        margin-right: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @include mobile-only {
-          width: 16px;
-          width: 16px;
-        }
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transform: rotate(0deg);
-          transition: transform 0.5s ease;
-        }
-        &.rotate img {
-          transform: rotate(-180deg);
-        }
-      }
-    }
-
-    .content {
-      width: 90%;
-      background-color: $grey-backgd;
-      border-radius: 5px;
-      margin: -45px 0 10px 50px;
-      z-index: 1;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.5s ease;
-      @include mobile-only {
-        margin-bottom: 10px;
-        margin: -55px 0 10px 20px;
-      }
-
-      &.open {
-        max-height: 200px;
-        transition: max-height 0.5s ease;
-      }
-
-      .content-text {
-        color: $main-red;
-        font-size: 18px;
-        transition: transform 0.5s ease;
-        transform: translateY(-100%);
-        @include mobile-only {
-          font-size: 12px;
-          margin: 20px 15px 15px 15px;
-        }
-      }
-
-      &.open .content-text {
-        transform: translateY(0);
-        transition: transform 0.5s ease;
-      }
-      .description-text {
-        padding: 10px 20px;
-      }
-    }
+    gap: 20px;
   }
 }
