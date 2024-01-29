@@ -23,29 +23,29 @@
   }
 }
 
-.leftArrow {
+.arrow {
   position: absolute;
-  left: 23px;
   cursor: pointer;
-
   @include mobile-only {
     height: 24px;
+  }
+}
+
+.left-arrow {
+  left: 23px;
+  @include mobile-only {
     left: 8px;
   }
 }
 
-.rightArrow {
-  position: absolute;
+.right-arrow {
   right: 23px;
-  cursor: pointer;
-
   @include mobile-only {
-    height: 24px;
     right: 8px;
   }
 }
 
-.slideCounter {
+.slide-counter {
   color: white;
   text-shadow: 1px 1px 2px black;
   position: absolute;

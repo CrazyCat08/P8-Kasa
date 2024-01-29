@@ -7,7 +7,7 @@ function About() {
   return (
     <section>
       <Banner image={bannerImageAbout} title={""} />
-      <div className="aboutDataContainer">
+      <div className="about-data-container">
         {aboutData.map((item) => (
           <Accordion key={item.id} title={item.title} content={item.content} />
         ))}

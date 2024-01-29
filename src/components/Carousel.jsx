@@ -19,18 +19,18 @@ function Carousel({ photos }) {
         // Affichage du numéro de la photo et des flèches de navigation
         // si il y a plus d'1 photo à montrer
         <>
-          <p className="slideCounter">
+          <p className="slide-counter">
             {currentIndex + 1} / {photos.length}
           </p>
 
           <img
-            className="leftArrow"
+            className="arrow left-arrow"
             src={leftArrow}
             alt="Flèche gauche"
             onClick={previousPhoto}
           />
           <img
-            className="rightArrow"
+            className="arrow right-arrow"
             src={rightArrow}
             alt="Flèche droite"
             onClick={nextPhoto}

@@ -48,7 +48,7 @@ function AccommodationSheet() {
   ];
 
   return (
-    <section className="accommodationContainer">
+    <section className="accommodation-container">
       <Carousel photos={pictures} />
       <div className="accommodation-details-header">
         <div className="title-location-tags">
@@ -73,7 +73,7 @@ function AccommodationSheet() {
         </div>
       </div>
 
-      <div className="housing-accordions">
+      <div className="accommodation-accordions">
         {accordionData.map((item) => (
           <Accordion
             key={item.id}
