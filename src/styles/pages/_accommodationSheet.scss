@@ -1,15 +1,3 @@
-.equipment-list {
-  li {
-    margin-left: -20px;
-    line-height: 0;
-    margin-top: 27px;
-
-    @include mobile-only {
-      margin-top: 20px;
-    }
-  }
-}
- 
 .accommodationContainer {
   display: flex;
   flex-direction: column;

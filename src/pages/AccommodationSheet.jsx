@@ -14,30 +14,42 @@ function AccommodationSheet() {
     // return <Error />;
   }
 
-  const { title, description, host, rating, location, equipments, tags } =
-    selectedAccommodation;
+  const {
+    title,
+    pictures,
+    description,
+    host,
+    rating,
+    location,
+    equipments,
+    tags,
+  } = selectedAccommodation;
   const hostName = host.name;
   const hostPicture = host.picture;
 
-  // Création d'un JSON pour le faire passer en props au composant Accordion
+  // Data qui seront passées en props au composant Accordion
   const accordionData = [
     {
+      id: "accDes",
       title: "Description",
       description,
     },
     {
+      id: "accEqu",
       title: "Équipements",
-      description: equipments.map((equipment, index) => (
-        <ul className="content-text equipment-list" key={index}>
-          <li>{equipment}</li>
+      description: (
+        <ul className="equipment-list">
+          {equipments.map((equipment, index) => (
+            <li key={index}>{equipment}</li>
+          ))}
         </ul>
-      )),
+      ),
     },
   ];
 
   return (
     <section className="accommodationContainer">
-      <Carousel photos={selectedAccommodation.pictures} />
+      <Carousel photos={pictures} />
       <div className="accommodation-details-header">
         <div className="title-location-tags">
           <div className="title-location">

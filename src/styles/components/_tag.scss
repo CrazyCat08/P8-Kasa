@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: 115px;
   height: 25px;
   background-color: $main-red;
   color: white;
@@ -11,7 +10,6 @@
   border-radius: 10px;
 
   @include mobile-only {
-    // width: 84px;
     height: 18px;
     font-size: 10px;
     padding: 2px 10px;
