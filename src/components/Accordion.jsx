@@ -22,7 +22,6 @@ function Accordion({ title, content }) {
       </div>
       <div className={`accordion__content ${isOpen ? "open" : ""}`}>
         <div className="content-text">{content}</div>
-        {/* <div className="description-text">{description}</div> */}
       </div>
     </div>
   );
