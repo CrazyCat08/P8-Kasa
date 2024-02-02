@@ -1,8 +1,6 @@
 .error-container {
-  display: flex;
+  @include flex-2center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 55px;
   margin-bottom: 139px;
   width: 86%;

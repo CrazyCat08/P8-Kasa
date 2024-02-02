@@ -1,5 +1,6 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import accommodations from "../data/accommodations-data.json";
+import Error from "../components/Error";
 import Carousel from "../components/Carousel";
 import Tag from "../components/Tag";
 import Rating from "../components/Rating";
@@ -9,9 +10,9 @@ function AccommodationSheet() {
   const { id } = useParams();
   const selectedAccommodation = accommodations.find((item) => item.id === id);
 
+  // Si l'id est incorrecte, redirection vers la page d'erreur
   if (!selectedAccommodation) {
-    <Navigate to="*" />;
-    // return <Error />;
+    return <Error />;
   }
 
   const {
@@ -24,6 +25,7 @@ function AccommodationSheet() {
     equipments,
     tags,
   } = selectedAccommodation;
+
   const hostName = host.name;
   const hostPicture = host.picture;
 

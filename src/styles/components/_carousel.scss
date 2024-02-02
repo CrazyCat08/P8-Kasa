@@ -1,7 +1,5 @@
 .carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-2center;
   width: 100%;
   position: relative;
   margin-bottom: 30px;

@@ -1,7 +1,5 @@
 .tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-2center;
   height: 25px;
   background-color: $main-red;
   color: white;

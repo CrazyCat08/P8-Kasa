@@ -1,7 +1,5 @@
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-space-center;
   height: 68px;
   margin-top: 45px;
   margin-bottom: 50px;
